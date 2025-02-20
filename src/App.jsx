@@ -12,26 +12,36 @@ import Order from "./pages/Order";
 import Login from "./components/Login";
 import FilterData from "./pages/FilterData";
 import PrdoductDetails from "./pages/PrdoductDetails";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [order, setOrder] = useState('');
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout setOrder={setOrder} />} />
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
-        {/* <Route path="/product/:id" element={<PrdoductDetails></PrdoductDetails>}></Route> */}
-        <Route path="/filter-data" element={<FilterData></FilterData>}></Route>
-        <Route path="/order-confirmation" element={<Order order={order}></Order>}></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <ToastContainer />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout setOrder={setOrder} />} />
+          <Route path="/about" element={<About></About>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
+          {/* <Route path="/product/:id" element={<PrdoductDetails></PrdoductDetails>}></Route> */}
+          <Route
+            path="/filter-data"
+            element={<FilterData></FilterData>}
+          ></Route>
+          <Route
+            path="/order-confirmation"
+            element={<Order order={order}></Order>}
+          ></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

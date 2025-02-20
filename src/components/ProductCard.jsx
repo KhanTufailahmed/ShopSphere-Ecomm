@@ -4,6 +4,8 @@ import cartSlice from "../redux/cartSlice";
 import { cartAction } from "../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -11,7 +13,15 @@ const ProductCard = ({ product }) => {
     e.stopPropagation();
     e.preventDefault();
     dispatch(cartAction.addToCart(product));
-    alert("Product Added Successfully!!");
+    toast.success("Product Added Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
   };
   return (
     // <NavLink to={`/product/${product.id}`}>
