@@ -8,7 +8,7 @@ import Image7 from "./Images/headphone.jpg";
 import Image8 from "./Images/robot.jpg";
 import Image9 from "./Images/wwatch.jpg";
 import Image10 from "./Images/shirt.jpg";
-
+//Done
 export const Categories = [
   "Electronics",
   "Fashion",
