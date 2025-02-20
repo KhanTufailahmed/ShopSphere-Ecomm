@@ -14,14 +14,19 @@ const ProductCard = ({ product }) => {
     e.preventDefault();
     dispatch(cartAction.addToCart(product));
     toast.success("Product Added Successfully!", {
-      position: "top-right",
+      position: window.innerWidth < 768 ? "bottom-center" : "top-right", 
       autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       theme: "colored",
+      style: {
+        fontSize: "14px", 
+        width: window.innerWidth < 768 ? "90%" : "auto", 
+      },
     });
+    
   };
   return (
     // <NavLink to={`/product/${product.id}`}>

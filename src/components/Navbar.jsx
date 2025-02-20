@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md ">
       <div className="flex justify-between container mx-auto px-4 md:px-16 lg:px-24 py-4 items-center">
         <div className="text-lg font-bold pb-1">
-          <Link to={"/"}>ShopSphere  </Link>
+          <Link to={"/"}>ShopSphere </Link>
         </div>
         <div className="relative flex-1 mx-4">
           <form onSubmit={handleSearch}>
@@ -39,7 +39,7 @@ const Navbar = () => {
               type="text"
               placeholder="Search..."
               className="w-full py-2 px-2   border"
-              onChange={(e)=>setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             ></input>
             <IoSearch className="absolute top-3 right-3 text-red-500" />
           </form>
@@ -59,7 +59,10 @@ const Navbar = () => {
           >
             Login | Register
           </button>
-          <button className="block md:hidden">
+          <button
+            className="block md:hidden "
+            onClick={() => setIsModelOpen(true)}
+          >
             <FaUserCircle />
           </button>
         </div>
