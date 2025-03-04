@@ -13,6 +13,7 @@ import Login from "./components/Login";
 import FilterData from "./pages/FilterData";
 import PrdoductDetails from "./pages/PrdoductDetails";
 import { ToastContainer } from "react-toastify";
+import Tracking from "./pages/Tracking.jsx";
 
 function App() {
   const [order, setOrder] = useState('');
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/order-tracking" element={<Tracking />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout setOrder={setOrder} />} />
           <Route path="/about" element={<About></About>}></Route>
@@ -39,6 +41,7 @@ function App() {
             element={<Order order={order}></Order>}
           ></Route>
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </>

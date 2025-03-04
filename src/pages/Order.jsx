@@ -43,10 +43,16 @@ const Order = () => {
         </div>
       </div>
       <div className="mt-6 ">
-        <button className="bg-green-500 text-white mr-2 py-2 px-4 hover:bg-green-600">
+        <button
+          className="bg-green-500 text-white mr-2 py-2 px-4 hover:bg-green-600"
+          onClick={() => navigate("/order-tracking")}
+        >
           Order Trackin
         </button>
-        <button className="bg-red-500 text-white py-2 px-4  hover:bg-red-600" onClick={()=>navigate('/')}>
+        <button
+          className="bg-red-500 text-white py-2 px-4  hover:bg-red-600"
+          onClick={() => navigate("/")}
+        >
           Continue Shopping
         </button>
       </div>
